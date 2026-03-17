@@ -1,1 +1,535 @@
-https://gemini.google.com/share/673ce075a598
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>頂尖企業數位轉型 | 軟硬整合服務 | 雲端架構解決方案</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #2dd4bf 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-tech-pattern {
+            background-color: #0f172a;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .service-card, .pricing-card, .team-card, .case-card {
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover, .team-card:hover, .case-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .pricing-card:hover {
+            transform: scale(1.02);
+        }
+
+        .avatar-placeholder {
+            background-color: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            aspect-ratio: 1 / 1;
+        }
+
+        .loading-spinner {
+            border: 3px solid #e2e8f0;
+            border-top: 3px solid #3b82f6;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .sticky-nav {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .google-form-container {
+            position: relative;
+            width: 100%;
+            height: 900px; 
+            overflow: hidden;
+            border-radius: 1rem;
+            background-color: #f8fafc;
+        }
+
+        .google-form-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .case-tag {
+            background: rgba(59, 130, 246, 0.1);
+            color: #3b82f6;
+            padding: 2px 12px;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- 導覽列 -->
+    <nav class="fixed w-full z-50 sticky-nav border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <span class="text-xl md:text-2xl font-bold gradient-text">BCT Consulting & Solutions</span>
+                </div>
+                <!-- 頂部導覽補齊 "雲端架構" -->
+                <div class="hidden md:flex space-x-6 text-sm lg:text-base">
+                    <a href="#services" class="text-gray-600 hover:text-blue-600 font-medium">核心服務</a>
+                    <a href="#cloud" class="text-gray-600 hover:text-blue-600 font-medium">雲端架構</a>
+                    <a href="#cases" class="text-gray-600 hover:text-blue-600 font-medium">成功案例</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-blue-600 font-medium">服務報價</a>
+                    <a href="#team" class="text-gray-600 hover:text-blue-600 font-medium">專業團隊</a>
+                    <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition shadow-lg">立即諮詢</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-600 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 手機版選單 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-4 py-4 space-y-4 text-center">
+            <a href="#services" class="block text-gray-600 font-medium">核心服務</a>
+            <a href="#cloud" class="block text-gray-600 font-medium">雲端架構</a>
+            <a href="#cases" class="block text-gray-600 font-medium">成功案例</a>
+            <a href="#pricing" class="block text-gray-600 font-medium">服務報價</a>
+            <a href="#team" class="block text-gray-600 font-medium">專業團隊</a>
+            <a href="#contact" class="block text-blue-600 font-bold">立即諮詢</a>
+        </div>
+    </nav>
+
+    <!-- 英雄區塊 (Hero Section) -->
+    <header class="pt-32 pb-24 bg-tech-pattern text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+            <div class="inline-block px-4 py-1.5 mb-6 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-bold">
+                企業數位轉型最佳夥伴
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                賦能企業轉型<br><span class="gradient-text">引領科技未來</span>
+            </h1>
+            <p class="text-xl text-gray-300 max-w-3xl mb-10">
+                深度結合「雲端架構、數位轉型、軟硬整合，與設備開發」四大領域，<br>為您打造無縫銜接的商業生態系統，實現真正的數位化競爭力。
+            </p>
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition shadow-xl">開始轉型計畫</a>
+                <a href="#services" class="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg font-bold text-lg transition backdrop-blur-sm border border-white/20">了解服務項目</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 核心服務區塊 -->
+    <section id="services" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">全方位的技術解決方案</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 text-lg">從底層硬體到雲端應用，我們提供一站式的研發與顧問服務。</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="service-card bg-white p-8 rounded-2xl border border-gray-100 shadow-sm text-center">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mx-auto mb-6 text-2xl">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">數位轉型</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">重新定義商業流程，導入 AI 數據分析，將傳統作業升級為自動化數位體系。</p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-2xl border border-gray-100 shadow-sm text-center">
+                    <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6 text-2xl">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">雲端架構</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">設計高穩定、可水平擴展的雲端環境，確保您的應用程式能應對任何流量突發。</p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-2xl border border-gray-100 shadow-sm text-center">
+                    <div class="w-14 h-14 bg-green-100 text-green-600 rounded-xl flex items-center justify-center mx-auto mb-6 text-2xl">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">軟硬整合</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">打破硬體與軟體間的隔閡，透過 IoT 協定與 API 實現裝置與雲端的即時通訊。</p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-2xl border border-gray-100 shadow-sm text-center">
+                    <div class="w-14 h-14 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mx-auto mb-6 text-2xl">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">設備開發</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">從 PLC 設計、機構打樣，到量產諮詢，量身打造專屬的工業或消費級電子設備。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技術深耕：雲端展示區塊 -->
+    <section id="cloud" class="py-24 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6">為企業打造高效率的「數據中樞」</h2>
+                    <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                        我們精通 AWS、GCP、Azure 等主流雲平台，不僅協助搬遷，更著重於微服務化、容器化（Docker/K8s）的架構重組，讓您的系統運作更輕快、成本更低。
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center p-4 bg-white rounded-xl shadow-sm">
+                            <i class="fas fa-check-circle text-green-500 text-xl mr-3"></i>
+                            <span class="font-medium">99.99% 高可用性架構設計</span>
+                        </div>
+                        <div class="flex items-center p-4 bg-white rounded-xl shadow-sm">
+                            <i class="fas fa-check-circle text-green-500 text-xl mr-3"></i>
+                            <span class="font-medium">代理式AI情境分析及流程設計</span>
+                        </div>
+                        <div class="flex items-center p-4 bg-white rounded-xl shadow-sm">
+                            <i class="fas fa-check-circle text-green-500 text-xl mr-3"></i>
+                            <span class="font-medium">多重異地備份與災害復原計畫</span>
+                        </div>
+                        <div class="flex items-center p-4 bg-white rounded-xl shadow-sm">
+                            <i class="fas fa-check-circle text-green-500 text-xl mr-3"></i>
+                            <span class="font-medium">基礎架構即代碼 (IaC) 管理</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 bg-gray-900 rounded-3xl p-8 shadow-2xl overflow-hidden relative border border-white/10">
+                    <div class="flex space-x-2 mb-6">
+                        <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                    </div>
+                    <div class="font-mono text-sm text-blue-300">
+                        <p class="mb-2">$ terraform plan</p>
+                        <p class="text-green-400">Plan: 15 to add, 0 to change, 0 to destroy.</p>
+                        <p class="mt-4 text-white"># Deploying Enterprise Cluster...</p>
+                        <div class="mt-4 h-32 flex items-end space-x-2">
+                            <div class="bg-blue-500/40 w-full h-1/2 rounded-t animate-pulse"></div>
+                            <div class="bg-blue-500/60 w-full h-3/4 rounded-t animate-pulse"></div>
+                            <div class="bg-blue-500 w-full h-full rounded-t"></div>
+                            <div class="bg-blue-500/80 w-full h-2/3 rounded-t animate-pulse"></div>
+                            <div class="bg-blue-500/40 w-full h-1/2 rounded-t animate-pulse"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 導入事績 (Case Studies) -->
+    <section id="cases" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">導入事績與實戰案例</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 text-lg">透過專業顧問與技術落地，我們已協助多家具備指標意義的企業達成數位轉型目標。</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- 案例一：醫療材料大廠 -->
+                <div class="case-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-lg flex flex-col">
+                    <div class="p-8 flex-grow">
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="case-tag uppercase tracking-wider">Smart Manufacturing</span>
+                            <i class="fas fa-vial text-blue-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">醫療材料大廠：產線全自動化與數據監控</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            面對精密醫療耗材的高良率要求，我們重新開發機台與流程整合系統，導入即時數據採集與異常預警功能。
+                        </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-blue-50 p-4 rounded-xl text-center">
+                                <p class="text-2xl font-bold text-blue-600">99.99%</p>
+                                <p class="text-[10px] text-gray-500 font-bold">系統 On-time</p>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-xl text-center">
+                                <p class="text-2xl font-bold text-green-600">98%</p>
+                                <p class="text-[10px] text-gray-500 font-bold">產品良率提升</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 案例二：HRM 雲端解決方案 -->
+                <div class="case-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-lg flex flex-col">
+                    <div class="p-8 flex-grow">
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="case-tag uppercase tracking-wider">Cloud Enterprise</span>
+                            <i class="fas fa-users-cog text-purple-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">跨國集團：HRM 雲端人力資源管理升級</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            汰換內部老舊系統，導入雲端 HRM 平台。盤點全公司人力資源，實現動態組隊與高效人才管理。
+                        </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-purple-50 p-4 rounded-xl text-center">
+                                <p class="text-2xl font-bold text-purple-600">65%</p>
+                                <p class="text-[10px] text-gray-500 font-bold">行政作業減省</p>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-xl text-center">
+                                <p class="text-2xl font-bold text-blue-600">Real-time</p>
+                                <p class="text-[10px] text-gray-500 font-bold">資源動態配置</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 案例三：高科技製造 D2C -->
+                <div class="case-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-lg flex flex-col">
+                    <div class="p-8 flex-grow">
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="case-tag uppercase tracking-wider">E-Commerce DX</span>
+                            <i class="fas fa-shopping-cart text-orange-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">電子零組件廠：B2B2C 電商營運轉型</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            從傳統貿易轉向線上直銷。建構平台架構並整合線上線下(OMO)體驗，建立品牌與終端消費者的直接連結。
+                        </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-orange-50 p-4 rounded-xl text-center">
+                                <p class="text-2xl font-bold text-orange-600">3x</p>
+                                <p class="text-[10px] text-gray-500 font-bold">線上訂單增長</p>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-xl text-center">
+                                <p class="text-2xl font-bold text-blue-600">Full Stack</p>
+                                <p class="text-[10px] text-gray-500 font-bold">全通路數位整合</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服務報價 -->
+    <section id="pricing" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">服務報價與契約形態</h2>
+                <p class="text-gray-600">我們為中小企業提供多樣化且具彈性的合作模式</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 items-center">
+                <div class="pricing-card bg-white border border-gray-200 p-10 rounded-2xl text-center shadow-sm">
+                    <h3 class="text-2xl font-bold mb-2">單次技術諮詢</h3>
+                    <div class="text-blue-600 font-bold text-xl mb-6">免費</div>
+                    <p class="text-gray-500 mb-8 leading-relaxed text-sm">歡迎初步與我們討論您的技術瓶頸。我們將透過會議協助釐清數位轉型的優先順序。</p>
+                    <div class="border-t border-gray-100 pt-6">
+                        <span class="text-gray-400 text-sm italic">適合初期評估階段</span>
+                    </div>
+                </div>
+
+                <div class="pricing-card bg-white border-2 border-blue-600 p-10 rounded-2xl text-center shadow-2xl relative">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white px-6 py-1 rounded-full text-sm font-bold">
+                        最受歡迎
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">伴隨型 DX 支援</h3>
+                    <div class="text-blue-600 font-bold text-xl mb-6">月費制</div>
+                    <p class="text-gray-600 mb-8 leading-relaxed text-sm">從課題整理、系統開發到導入定著，提供 1 名以上的專屬顧問/工程師，彈性配合您的預算與進度。</p>
+                    <div class="space-y-4 text-left mb-8">
+                        <div class="flex items-center text-sm"><i class="fas fa-check text-green-500 mr-2"></i> 月額固定，預算好控管</div>
+                        <div class="flex items-center text-sm"><i class="fas fa-check text-green-500 mr-2"></i> 契約按月計算，彈性調整</div>
+                        <div class="flex items-center text-sm"><i class="fas fa-check text-green-500 mr-2"></i> 完整技術回報與透明溝通</div>
+                    </div>
+                    <a href="#contact" class="block bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition text-center">立即聯繫</a>
+                </div>
+
+                <div class="pricing-card bg-white border border-gray-200 p-10 rounded-2xl text-center shadow-sm">
+                    <h3 class="text-2xl font-bold mb-2">專案委託開發</h3>
+                    <div class="text-blue-600 font-bold text-xl mb-6">整案統包</div>
+                    <p class="text-gray-500 mb-8 leading-relaxed text-sm">針對需求明確的專案，我們在明確的交期與預算內負責到底。包含 NDA 簽署與品質保證。</p>
+                    <div class="border-t border-gray-100 pt-6">
+                        <span class="text-gray-400 text-sm italic">適合已有明確規格的專案</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 text-center text-gray-500 text-sm italic">
+                ※ 我們亦支援政府數位轉型補助計畫之諮詢，詳細內容歡迎洽詢。
+            </div>
+        </div>
+    </section>
+
+    <!-- 團隊介紹 -->
+    <section id="team" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-4">專業團隊介紹</h2>
+            <div class="w-16 h-1 bg-blue-600 mx-auto mb-16"></div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Tony -->
+                <div class="team-card bg-white p-10 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
+                    <div class="w-36 h-36 rounded-full overflow-hidden border-4 border-white shadow-md mb-6 avatar-placeholder" id="avatar-tony">
+                        <div class="loading-spinner"></div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">Tony</h3>
+                    <p class="text-blue-600 font-medium mb-4">生產自動化顧問</p>
+                    <p class="text-gray-500 text-sm px-4">資深流程專家，精通亞洲高科技製造、工業 4.0 ，及生產線優化。</p>
+                </div>
+
+                <!-- Linus -->
+                <div class="team-card bg-white p-10 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
+                    <div class="w-36 h-36 rounded-full overflow-hidden border-4 border-white shadow-md mb-6 avatar-placeholder" id="avatar-linus">
+                        <div class="loading-spinner"></div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">Linus</h3>
+                    <p class="text-blue-600 font-medium mb-4">技術創新顧問</p>
+                    <p class="text-gray-500 text-sm px-4">軟體工程技術領袖，致力於高性能系統與雲端整合。</p>
+                </div>
+
+                <!-- Vida -->
+                <div class="team-card bg-white p-10 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
+                    <div class="w-36 h-36 rounded-full overflow-hidden border-4 border-white shadow-md mb-6 avatar-placeholder" id="avatar-vida">
+                        <div class="loading-spinner"></div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">Vida</h3>
+                    <p class="text-blue-600 font-medium mb-4">商業戰略顧問</p>
+                    <p class="text-gray-500 text-sm px-4">深耕區域商務模式，導航企業精確數位轉型之路。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯絡我們 -->
+    <section id="contact" class="py-24 bg-white border-t border-gray-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">啟動您的轉型之旅</h2>
+                <div class="w-12 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 text-lg">請填寫下方的 Google 表單，專屬顧問將在 24 小時內與您聯繫。</p>
+            </div>
+            
+            <div class="bg-white rounded-3xl shadow-2xl p-2 border border-gray-100 overflow-hidden">
+                <div class="google-form-container">
+                    <iframe 
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSfEPbNTzR_TWfNnmGkmRexw2AlpzukMRbtuEQ8KHI1K4y2DIg/viewform?embedded=true" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0">
+                        載入中…
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- 聯繫資訊 -->
+            <div class="mt-16 grid md:grid-cols-3 gap-8 text-left">
+                <div class="flex items-center space-x-4">
+                    <div class="bg-blue-100 p-4 rounded-full text-blue-600"><i class="fas fa-envelope"></i></div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase tracking-widest font-bold">Email</p>
+                        <p class="text-gray-800 font-medium">info@bctec.com.tw</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="bg-blue-100 p-4 rounded-full text-blue-600"><i class="fas fa-phone-alt"></i></div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase tracking-widest font-bold">Phone</p>
+                        <p class="text-gray-800 font-medium">+886 37 473828</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="bg-blue-100 p-4 rounded-full text-blue-600"><i class="fas fa-map-marker-alt"></i></div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase tracking-widest font-bold">Office</p>
+                        <p class="text-gray-800 font-medium text-sm">苗栗縣竹南鎮八德街 34 號</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div class="mb-6 md:mb-0">
+                <span class="text-xl font-bold text-white">BCT Consulting & Solutions</span>
+                <p class="text-sm mt-2">© 2024 BCT Consulting & Solutions. All Rights Reserved.</p>
+            </div>
+            <!-- 底部頁尾補齊 "案例" -->
+            <div class="flex flex-wrap justify-center space-x-4 md:space-x-8 text-sm">
+                <a href="#services" class="hover:text-white transition">服務</a>
+                <a href="#cloud" class="hover:text-white transition">技術</a>
+                <a href="#cases" class="hover:text-white transition">案例</a>
+                <a href="#pricing" class="hover:text-white transition">報價</a>
+                <a href="#team" class="hover:text-white transition">團隊</a>
+                <a href="#contact" class="hover:text-white transition">聯絡</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const apiKey = ""; 
+
+        async function fetchWithRetry(url, options, maxRetries = 5) {
+            for (let i = 0; i < maxRetries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (response.ok) return await response.json();
+                } catch (e) {
+                    if (i === maxRetries - i) throw e;
+                }
+                await new Promise(res => setTimeout(res, Math.pow(2, i) * 1000));
+            }
+            throw new Error('Retries failed');
+        }
+
+        async function generateAvatar(prompt, elementId) {
+            const container = document.getElementById(elementId);
+            if (!container) return;
+
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image-preview:generateContent?key=${apiKey}`;
+            
+            const stylePrompt = `High-quality professional flat vector illustration, profile avatar of ${prompt}. Aged 30 to 40 years old, East Asian features, wearing a solid-colored plain business collared shirt with absolutely NO patterns, NO logos, and NO text. Minimalist design, solid pastel background, clean lines, no realism, no photography.`;
+
+            try {
+                const result = await fetchWithRetry(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: stylePrompt }] }],
+                        generationConfig: { responseModalities: ["IMAGE"] }
+                    })
+                });
+
+                const base64 = result.candidates?.[0]?.content?.parts?.find(p => p.inlineData)?.inlineData?.data;
+                if (base64) {
+                    container.innerHTML = `<img src="data:image/png;base64,${base64}" class="w-full h-full object-cover" alt="Avatar">`;
+                }
+            } catch (error) {
+                container.innerHTML = `<i class="fas fa-user-tie text-gray-300 text-5xl"></i>`;
+            }
+        }
+
+        window.onload = () => {
+            generateAvatar("a professional 47-year-old East Asian male with neat short hair, NO glasses", "avatar-tony");
+            generateAvatar("a confident 44-year-old East Asian male with mid-short curly stylish hair, NO glasses", "avatar-linus");
+            generateAvatar("a professional 48-year-old East Asian male with a smart look, wearing black rectangular framed glasses", "avatar-vida");
+        };
+    </script>
+</body>
+</html>
