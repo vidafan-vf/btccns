@@ -394,7 +394,7 @@
         </div>
     </section>
 
-    <!-- 場景模擬體驗區塊 (已調整為白底) -->
+    <!-- 場景模擬體驗區塊 (修復點擊範圍) -->
     <section id="demo" class="py-16 bg-white overflow-hidden relative border-y border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-12">
@@ -432,7 +432,7 @@
                 </div>
             </div>
 
-            <!-- What you’ll see 卡片調整 -->
+            <!-- What you’ll see 卡片 (修正點擊邏輯) -->
             <div class="bg-gray-50 border border-gray-100 rounded-3xl p-6 md:p-10 max-w-5xl mx-auto shadow-sm">
                 <div class="grid md:grid-cols-2 gap-8 items-center">
                     <div>
@@ -443,21 +443,22 @@
                         <ul class="space-y-4">
                             <li class="flex items-start">
                                 <div class="mt-1 mr-3 text-blue-500 text-sm"><i class="fas fa-check-circle"></i></div>
-                                <span class="text-gray-600 text-sm">數據如何在不同系統間流暢串聯</span>
+                                <span class="text-gray-600 text-sm font-medium">數據如何在不同系統間流暢串聯</span>
                             </li>
                             <li class="flex items-start">
                                 <div class="mt-1 mr-3 text-blue-500 text-sm"><i class="fas fa-check-circle"></i></div>
-                                <span class="text-gray-600 text-sm">如何從龐雜數據中即時產生關鍵洞察</span>
+                                <span class="text-gray-600 text-sm font-medium">如何從龐雜數據中即時產生關鍵洞察</span>
                             </li>
                             <li class="flex items-start">
                                 <div class="mt-1 mr-3 text-blue-500 text-sm"><i class="fas fa-check-circle"></i></div>
-                                <span class="text-gray-600 text-sm">AI 如何協助或自動化您的營運決策</span>
+                                <span class="text-gray-600 text-sm font-medium">AI 如何協助或自動化您的營運決策</span>
                             </li>
                         </ul>
                     </div>
-                    <div class="text-center md:text-right bg-gradient-to-br from-blue-50 to-white p-6 rounded-2xl border border-blue-100 shadow-sm">
+                    <!-- 只有此按鈕區域與按鈕本身具有引導效果 -->
+                    <div class="text-center md:text-right bg-white p-6 rounded-2xl border border-gray-100 shadow-sm md:shadow-none">
                         <p class="text-xs text-blue-600 mb-4 uppercase tracking-widest font-bold">企業專屬 Demo 名額有限</p>
-                        <a href="#contact" class="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold transition shadow-xl shadow-blue-200">
+                        <a href="#contact" class="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold transition-all shadow-xl shadow-blue-200 hover:-translate-y-1">
                             立即預約場景模擬
                         </a>
                         <p class="mt-3 text-[10px] text-gray-400 italic">依據您的產業特性與需求量身定制</p>
@@ -466,6 +467,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- 服務報價 -->
     <section id="pricing" class="py-24 bg-gray-50">
