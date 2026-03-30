@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例詳解 | 系統整合：跨系統資料同步與流程重建 | BCT Consulting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #2dd4bf 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-dark-tech {
+            background-color: #0f172a;
+            background-image: radial-gradient(circle at 2px 2px, #1e293b 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            border-color: #3b82f6;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .content-section {
+            position: relative;
+        }
+
+        .content-section::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: #3b82f6;
+            border-radius: 2px;
+        }
+
+        .sticky-nav {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- 導覽列 -->
+    <nav class="fixed w-full z-50 sticky-nav border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl md:text-2xl font-bold gradient-text">BCT Consulting</a>
+                </div>
+                <div class="flex space-x-6 items-center">
+                    <a href="index.html#cases" class="text-gray-600 hover:text-blue-600 font-medium text-sm">返回案例列表</a>
+                    <a href="index.html#contact" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition shadow-lg text-sm">立即諮詢</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄區塊 -->
+    <header class="pt-32 pb-20 bg-dark-tech text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-8">
+                <span class="px-3 py-1 bg-blue-600/20 text-blue-400 border border-blue-600/30 rounded-full text-xs font-bold uppercase tracking-wider">IT Integration & Operations</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+                系統整合大腦：<br><span class="gradient-text">跨系統資料同步與流程重建</span>
+            </h1>
+            <p class="text-gray-400 text-lg max-w-3xl mb-12">
+                透過資料整合架構與流程重建，建立穩定且可擴展的跨系統資料同步機制，終結資訊孤島。
+            </p>
+
+            <!-- 成功亮點數據 -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="stat-card p-6 rounded-2xl">
+                    <div class="text-blue-500 mb-2"><i class="fas fa-history text-2xl"></i></div>
+                    <div class="text-3xl font-bold text-white mb-1">-30%</div>
+                    <div class="text-gray-500 text-xs font-bold uppercase">人工處理時間</div>
+                </div>
+                <div class="stat-card p-6 rounded-2xl">
+                    <div class="text-teal-400 mb-2"><i class="fas fa-shield-virus text-2xl"></i></div>
+                    <div class="text-3xl font-bold text-white mb-1">Low</div>
+                    <div class="text-gray-500 text-xs font-bold uppercase">資料錯誤率</div>
+                </div>
+                <div class="stat-card p-6 rounded-2xl">
+                    <div class="text-purple-400 mb-2"><i class="fas fa-sync-alt text-2xl"></i></div>
+                    <div class="text-3xl font-bold text-white mb-1">Real-time</div>
+                    <div class="text-gray-500 text-xs font-bold uppercase">資料同步效率</div>
+                </div>
+                <div class="stat-card p-6 rounded-2xl">
+                    <div class="text-orange-400 mb-2"><i class="fas fa-expand-arrows-alt text-2xl"></i></div>
+                    <div class="text-3xl font-bold text-white mb-1">High</div>
+                    <div class="text-gray-500 text-xs font-bold uppercase">架構擴展性</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-3 gap-16">
+                
+                <div class="lg:col-span-2 space-y-16">
+                    <!-- 背景與挑戰 -->
+                    <section class="content-section pl-8">
+                        <h2 class="text-2xl font-bold mb-6">現狀分析與核心挑戰</h2>
+                        <div class="prose prose-blue text-gray-600 leading-relaxed">
+                            <p class="mb-4">在多套系統並行運作的環境下，該企業面臨嚴重的「資訊同步危機」：</p>
+                            <ul class="list-disc pl-5 space-y-3">
+                                <li><strong>人工轉換耗時：</strong> 資料需頻繁透過人工手動轉檔、重新輸入，導致作業延遲。</li>
+                                <li><strong>高錯誤風險：</strong> 人為輸入錯誤率居高不下，造成各部門間帳務或庫存數據對不起來。</li>
+                                <li><strong>營運反應遲鈍：</strong> 因為缺乏即時同步機制，決策者看到的數據往往是「昨天以前」的舊資訊。</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- BCT 解決方案 -->
+                    <section class="content-section pl-8">
+                        <h2 class="text-2xl font-bold mb-6">BCT 的技術方案：Solution Architecture</h2>
+                        <div class="grid md:grid-cols-2 gap-8 mb-8">
+                            <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                                <h4 class="font-bold text-blue-600 mb-3"><i class="fas fa-project-diagram mr-2"></i>API 串接與中介層</h4>
+                                <p class="text-gray-600 text-sm">規劃統一的 API 介面與中介資料層 (Middleware)，負責各系統間的對接與資料清洗轉換。</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                                <h4 class="font-bold text-blue-600 mb-3"><i class="fas fa-stream mr-2"></i>資料交換格式統一</h4>
+                                <p class="text-gray-600 text-sm">定義標準化的資料交換規範，確保未來新增系統時能以最快速度完成對接。</p>
+                            </div>
+                        </div>
+                        <div class="prose prose-blue text-gray-600 leading-relaxed">
+                            <p>我們不只是做技術上的「接管」，更核心的是<strong>重新梳理資料流與業務流程</strong>：</p>
+                            <ul class="list-disc pl-5 space-y-3 mt-4">
+                                <li><strong>同步邏輯一致化：</strong> 確保主檔數據（Master Data）在各系統間具備單一事實來源（Single Source of Truth）。</li>
+                                <li><strong>自動補償機制：</strong> 當同步發生異常時，系統能自動重新嘗試或即時發出警報，確保資料不遺失。</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- 落地成效 -->
+                    <section class="content-section pl-8">
+                        <h2 class="text-2xl font-bold mb-6">實施成效</h2>
+                        <div class="bg-blue-600 rounded-3xl p-8 text-white shadow-xl relative overflow-hidden">
+                            <div class="relative z-10 grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h4 class="text-blue-200 text-sm font-bold uppercase mb-4">營運效率</h4>
+                                    <ul class="space-y-4">
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                                            <span>人工資料處理時間降低約 30%</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                                            <span>跨系統作業延遲從「天」縮短至「秒」</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-blue-200 text-sm font-bold uppercase mb-4">品質控制</h4>
+                                    <ul class="space-y-4">
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                                            <span>資料錯誤率明顯降低，帳務精準度大幅提升</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                                            <span>系統穩定性與資料同步即時性顯著強化</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- 右側卡片 -->
+                <div class="space-y-8">
+                    <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-lg">
+                        <h3 class="font-bold text-lg mb-6 border-b pb-4">專案摘要</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <p class="text-xs text-gray-400 font-bold uppercase mb-1">主要對象</p>
+                                <p class="text-gray-800 font-medium">企業 IT 部門 / 營運管理層</p>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400 font-bold uppercase mb-1">解決方案</p>
+                                <p class="text-gray-800 font-medium">系統整合與資料同步機制</p>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400 font-bold uppercase mb-1">關鍵技術</p>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="bg-gray-100 px-3 py-1 rounded text-xs text-gray-600">API Integration</span>
+                                    <span class="bg-gray-100 px-3 py-1 rounded text-xs text-gray-600">Middleware</span>
+                                    <span class="bg-gray-100 px-3 py-1 rounded text-xs text-gray-600">Data Flow Reconstruction</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-2xl shadow-lg text-white">
+                        <h3 class="font-bold text-lg mb-4">擺脫資訊孤島？</h3>
+                        <p class="text-gray-400 text-sm mb-6">
+                            我們可以為您診斷目前的系統瓶頸，打造無障礙的資訊流通環境。
+                        </p>
+                        <a href="index.html#contact" class="block w-full text-center bg-blue-600 py-3 rounded-lg font-bold hover:bg-blue-700 transition">聯繫技術專家</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center md:text-left flex flex-col md:flex-row justify-between items-center">
+            <div>
+                <span class="text-xl font-bold text-white">BCT Consulting & Solutions</span>
+                <p class="text-sm mt-2">© 2024 BCT Consulting & Solutions. All Rights Reserved.</p>
+            </div>
+            <div class="flex space-x-6 mt-6 md:mt-0 text-sm">
+                <a href="index.html" class="hover:text-white">回首頁</a>
+                <a href="index.html#services" class="hover:text-white">核心服務</a>
+                <a href="index.html#contact" class="hover:text-white">聯絡我們</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

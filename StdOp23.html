@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例詳解 | 流程標準化：組織運作與制度落地 | BCT Consulting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 統一深色科技感底色 */
+        .bg-dark-tech {
+            background-color: #0f172a;
+            background-image: radial-gradient(circle at 2px 2px, #1e293b 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            border-color: #10b981;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .content-section {
+            position: relative;
+        }
+
+        .content-section::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: #10b981;
+            border-radius: 2px;
+        }
+
+        .sticky-nav {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- 導覽列 -->
+    <nav class="fixed w-full z-50 sticky-nav border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl md:text-2xl font-bold gradient-text">BCT Consulting</a>
+                </div>
+                <div class="flex space-x-6 items-center">
+                    <a href="index.html#cases" class="text-gray-600 hover:text-emerald-600 font-medium text-sm">返回案例列表</a>
+                    <a href="index.html#contact" class="bg-emerald-600 text-white px-5 py-2 rounded-full hover:bg-emerald-700 transition shadow-lg text-sm">立即諮詢</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄區塊：調整為深色科技感佈局 -->
+    <header class="pt-32 pb-20 bg-dark-tech text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-8">
+                <span class="px-3 py-1 bg-emerald-600/20 text-emerald-400 border border-emerald-600/30 rounded-full text-xs font-bold uppercase tracking-wider">Business Operations & Process</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+                從個人化到標準化：<br><span class="gradient-text">組織運作與制度高效落地</span>
+            </h1>
+            <p class="text-gray-400 text-lg max-w-3xl mb-12">
+                建立標準化流程與系統化控管機制，降低對個人經驗的過度依賴，提升組織運作的一致性與可控性，打造可規模化的營運基石。
+            </p>
+
+            <!-- 成功亮點數據：對齊另一個檔案的佈局 -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="stat-card p-6 rounded-2xl">
+                    <div class="text-emerald-500 mb-2"><i class="fas fa-rocket text-2xl"></i></div>
+                    <div class="text-3xl font-bold text-white mb-1">+80%</div>
+                    <div class="text-gray-500 text-xs font-bold uppercase">執行效率提升</div>
+                </div>
+                <div class="stat-card p-6 rounded-2xl">
+                    <div class="text-blue-500 mb-2"><i class="fas fa-check-double text-2xl"></i></div>
+                    <div class="text-3xl font-bold text-white mb-1">Stable</div>
+                    <div class="text-gray-500 text-xs font-bold uppercase">交付品質穩定度</div>
+                </div>
+                <div class="stat-card p-6 rounded-2xl">
+                    <div class="text-teal-500 mb-2"><i class="fas fa-user-shield text-2xl"></i></div>
+                    <div class="text-3xl font-bold text-white mb-1">Low</div>
+                    <div class="text-gray-500 text-xs font-bold uppercase">操作錯誤風險</div>
+                </div>
+                <div class="stat-card p-6 rounded-2xl">
+                    <div class="text-indigo-500 mb-2"><i class="fas fa-search text-2xl"></i></div>
+                    <div class="text-3xl font-bold text-white mb-1">Traceable</div>
+                    <div class="text-gray-500 text-xs font-bold uppercase">流程可追蹤性</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-3 gap-16">
+                
+                <div class="lg:col-span-2 space-y-16">
+                    <!-- 背景與挑戰 -->
+                    <section class="content-section pl-8">
+                        <h2 class="text-2xl font-bold mb-6">轉型背景與核心挑戰</h2>
+                        <div class="prose prose-emerald text-gray-600 leading-relaxed">
+                            <p class="mb-4">該組織隨著規模擴大，原有的感性管理與經驗傳承模式遇到了瓶頸：</p>
+                            <ul class="list-disc pl-5 space-y-3">
+                                <li><strong>過度依賴個人經驗：</strong> 作業流程存在於資深員工腦中，新人上手慢且不同人員操作結果差異極大。</li>
+                                <li><strong>品質波動不穩：</strong> 缺乏統一規範，導致交付效率與服務品質難以精確控管。</li>
+                                <li><strong>流程難以管理：</strong> 執行過程缺乏明確的節點與紀錄，當問題發生時難以追溯原因與責任。</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- BCT 解決方案 -->
+                    <section class="content-section pl-8">
+                        <h2 class="text-2xl font-bold mb-6">BCT 的方案：Solution Architecture</h2>
+                        <div class="grid md:grid-cols-2 gap-8 mb-8">
+                            <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                                <h4 class="font-bold text-emerald-600 mb-3"><i class="fas fa-file-invoice mr-2"></i>SOP 設計與導入</h4>
+                                <p class="text-gray-600 text-sm">梳理各崗位職責，設計易於執行的標準作業流程 (SOP) 與明確的作業規則。</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                                <h4 class="font-bold text-emerald-600 mb-3"><i class="fas fa-traffic-light mr-2"></i>系統化控管機制</h4>
+                                <p class="text-gray-600 text-sm">導入流程管理系統，設定各節點的審核與回報邏輯，並包含例外狀況的處理機制。</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 落地成效 -->
+                    <section class="content-section pl-8">
+                        <h2 class="text-2xl font-bold mb-6">卓越成效</h2>
+                        <div class="bg-emerald-600 rounded-3xl p-8 text-white shadow-xl relative overflow-hidden">
+                            <div class="relative z-10 grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h4 class="text-emerald-100 text-sm font-bold uppercase mb-4">執行效率</h4>
+                                    <ul class="space-y-4">
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check-circle text-emerald-300 mr-3"></i>
+                                            <span>整體流程執行效率提升約 20%</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check-circle text-emerald-300 mr-3"></i>
+                                            <span>縮短新進人員 50% 的學習曲線</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-emerald-100 text-sm font-bold uppercase mb-4">管理品質</h4>
+                                    <ul class="space-y-4">
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check-circle text-emerald-300 mr-3"></i>
+                                            <span>作業流程差異顯著降低，品質一致性提升</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check-circle text-emerald-300 mr-3"></i>
+                                            <span>人為操作錯誤風險顯著下降</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- 裝飾背景 -->
+                            <div class="absolute right-0 bottom-0 opacity-10 translate-x-1/4 translate-y-1/4">
+                                <i class="fas fa-medal text-[200px]"></i>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- 右側卡片 -->
+                <div class="space-y-8">
+                    <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-lg">
+                        <h3 class="font-bold text-lg mb-6 border-b pb-4">專案摘要</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <p class="text-xs text-gray-400 font-bold uppercase mb-1">主要對象</p>
+                                <p class="text-gray-800 font-medium">營運部門 / 品質管理 / HR</p>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400 font-bold uppercase mb-1">解決方案</p>
+                                <p class="text-gray-800 font-medium">標準化流程 (SOP) 與控管系統</p>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400 font-bold uppercase mb-1">關鍵關鍵詞</p>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="bg-gray-100 px-3 py-1 rounded text-xs text-gray-600">Standardization</span>
+                                    <span class="bg-gray-100 px-3 py-1 rounded text-xs text-gray-600">SOP Design</span>
+                                    <span class="bg-gray-100 px-3 py-1 rounded text-xs text-gray-600">Risk Management</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-emerald-700 p-8 rounded-2xl shadow-lg text-white">
+                        <h3 class="font-bold text-lg mb-4">邁向高效組織？</h3>
+                        <p class="text-emerald-100 text-sm mb-6">
+                            制度落地不只是寫在紙上，更是要融入系統。讓我們協助您建立可規模化的運作基石。
+                        </p>
+                        <a href="index.html#contact" class="block w-full text-center bg-white text-emerald-700 py-3 rounded-lg font-bold hover:bg-emerald-50 transition">預約營運諮詢</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center md:text-left flex flex-col md:flex-row justify-between items-center">
+            <div>
+                <span class="text-xl font-bold text-white">BCT Consulting & Solutions</span>
+                <p class="text-sm mt-2">© 2024 BCT Consulting & Solutions. All Rights Reserved.</p>
+            </div>
+            <div class="flex space-x-6 mt-6 md:mt-0 text-sm">
+                <a href="index.html" class="hover:text-white">回首頁</a>
+                <a href="index.html#services" class="hover:text-white">核心服務</a>
+                <a href="index.html#contact" class="hover:text-white">聯絡我們</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

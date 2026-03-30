@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictable Revenue View Stack - Manufacturing Architecture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --brand-primary: #2563eb;
+            --brand-secondary: #0ea5e9;
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --accent-green: #10b981;
+            --accent-purple: #8b5cf6;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Inter', -apple-system, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .layer-container {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .layer-container:hover {
+            border-color: var(--brand-secondary);
+            background-color: rgba(30, 41, 59, 0.8);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        .data-flow-line {
+            stroke: var(--brand-secondary);
+            stroke-width: 2;
+            fill: none;
+            stroke-dasharray: 5;
+            animation: flow 20s linear infinite;
+        }
+
+        @keyframes flow {
+            from { stroke-dashoffset: 100; }
+            to { stroke-dashoffset: 0; }
+        }
+
+        .node-highlight {
+            fill: var(--brand-primary);
+            filter: drop-shadow(0 0 8px var(--brand-primary));
+        }
+
+        .central-hub {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            border: 2px solid var(--brand-secondary);
+            box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+        }
+
+        .feedback-loop {
+            stroke: var(--accent-green);
+            stroke-dasharray: 4;
+            animation: flow-reverse 15s linear infinite;
+        }
+
+        @keyframes flow-reverse {
+            from { stroke-dashoffset: 0; }
+            to { stroke-dashoffset: 100; }
+        }
+
+        .tooltip {
+            position: absolute;
+            background: #000;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+            z-index: 100;
+            border: 1px solid #334155;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="max-w-6xl mx-auto">
+        <header class="mb-10 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300">
+                Predictable Revenue View Stack
+            </h1>
+            <p class="text-slate-400 text-lg">Manufacturing Enterprise Architecture</p>
+        </header>
+
+        <!-- Main Diagram Container with added right padding for the feedback loop -->
+        <div class="relative space-y-6 pr-12 lg:pr-16">
+            
+            <!-- Added Impact Section (New Top Layer) -->
+            <div class="layer-container rounded-xl p-6 bg-blue-900/20 border-blue-500/30">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-blue-500/20 text-blue-300 p-2 rounded-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </span>
+                    <h2 class="text-xl font-semibold uppercase tracking-wider text-blue-300">Strategic Impact</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="flex items-center gap-3 p-3 bg-slate-900/40 rounded-lg border border-blue-500/10">
+                        <svg class="w-8 h-8 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">Increased Incremental Revenue</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-900/40 rounded-lg border border-blue-500/10">
+                        <svg class="w-8 h-8 text-cyan-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                        <span class="text-sm font-medium">Increase Average Order Value</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-900/40 rounded-lg border border-blue-500/10">
+                        <svg class="w-8 h-8 text-yellow-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">Increase Customer Satisfaction</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-900/40 rounded-lg border border-blue-500/10">
+                        <svg class="w-8 h-8 text-purple-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                        <span class="text-sm font-medium">Increase Wallet Share</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Business Outcomes Layer -->
+            <div class="layer-container rounded-xl p-6 bg-slate-800/50">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-emerald-500/20 text-emerald-400 p-2 rounded-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </span>
+                    <h2 class="text-xl font-semibold uppercase tracking-wider text-emerald-400">Business Outcomes</h2>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-slate-900/50 p-4 rounded-lg border border-emerald-500/30 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">Predictable Revenue</div>
+                        <div class="text-xs text-slate-400">Stabilized Cash Flow</div>
+                    </div>
+                    <div class="bg-slate-900/50 p-4 rounded-lg border border-emerald-500/30 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">Revenue Growth</div>
+                        <div class="text-xs text-slate-400">Expansion & Upsell</div>
+                    </div>
+                    <div class="bg-slate-900/50 p-4 rounded-lg border border-emerald-500/30 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">95%+ Accuracy</div>
+                        <div class="text-xs text-slate-400">Forecast Precision</div>
+                    </div>
+                    <div class="bg-slate-900/50 p-4 rounded-lg border border-emerald-500/30 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">Proactive Care</div>
+                        <div class="text-xs text-slate-400">Churn Prevention</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Activation Layer -->
+            <div class="layer-container rounded-xl p-6 bg-slate-800/50">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-purple-500/20 text-purple-400 p-2 rounded-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </span>
+                    <h2 class="text-xl font-semibold uppercase tracking-wider text-purple-400">Activation Layer</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="p-3 bg-slate-900/40 rounded border border-purple-500/20">
+                        <h3 class="text-sm font-bold mb-2">Sales Actions</h3>
+                        <ul class="text-xs space-y-1 text-slate-300">
+                            <li>• Upsell/Cross-sell Recs</li>
+                            <li>• Next Best Action</li>
+                        </ul>
+                    </div>
+                    <div class="p-3 bg-slate-900/40 rounded border border-purple-500/20">
+                        <h3 class="text-sm font-bold mb-2">Service Actions</h3>
+                        <ul class="text-xs space-y-1 text-slate-300">
+                            <li>• Contract Conversion</li>
+                            <li>• Predictive Maint.</li>
+                        </ul>
+                    </div>
+                    <div class="p-3 bg-slate-900/40 rounded border border-purple-500/20">
+                        <h3 class="text-sm font-bold mb-2">Partner Actions</h3>
+                        <ul class="text-xs space-y-1 text-slate-300">
+                            <li>• Inventory Replenishment</li>
+                            <li>• Channel Expansion</li>
+                        </ul>
+                    </div>
+					<a href="https://vidafan-vf.github.io/btccns/#cases">
+                    <div class="p-3 bg-indigo-900/30 rounded border border-indigo-500/40">
+                        <h3 class="text-sm font-bold mb-2 flex items-center gap-2">
+                            <span class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
+                            AI Agent Automation
+                        </h3>
+                        <ul class="text-xs space-y-1 text-slate-300">
+                            <li>• Automated Alerts</li>
+                            <li>• Dynamic Re-forecasting</li>
+                        </ul>
+                    </div>
+					</a>
+                </div>
+            </div>
+
+            <!-- 4. Insights & Intelligence Layer -->
+            <div class="layer-container rounded-xl p-6 bg-slate-800/50">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-blue-500/20 text-blue-400 p-2 rounded-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.364-6.364l-.707-.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M12 21V12"></path></svg>
+                    </span>
+                    <h2 class="text-xl font-semibold uppercase tracking-wider text-blue-400">Insights & Intelligence</h2>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="flex-1 bg-slate-900/60 p-4 rounded-lg">
+                        <h3 class="text-xs font-bold text-slate-500 uppercase mb-3">Calculated Metrics</h3>
+                        <div class="grid grid-cols-2 gap-2 text-xs">
+                            <div class="bg-slate-800 p-2 rounded">Revenue Trends</div>
+                            <div class="bg-slate-800 p-2 rounded">Pipeline Gap</div>
+                            <div class="bg-slate-800 p-2 rounded">CLV Analysis</div>
+                            <div class="bg-slate-800 p-2 rounded">Usage Intensity</div>
+                        </div>
+                    </div>
+                    <div class="flex-1 bg-slate-900/60 p-4 rounded-lg">
+                        <h3 class="text-xs font-bold text-slate-500 uppercase mb-3">AI / ML Models</h3>
+                        <div class="grid grid-cols-2 gap-2 text-xs">
+                            <div class="bg-blue-900/20 border border-blue-500/30 p-2 rounded">Demand Forecast</div>
+                            <div class="bg-blue-900/20 border border-blue-500/30 p-2 rounded">Propensity Scoring</div>
+                            <div class="bg-blue-900/20 border border-blue-500/30 p-2 rounded">Anomaly Detection</div>
+                            <div class="bg-blue-900/20 border border-blue-500/30 p-2 rounded">Churn Predictor</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Unified Business View Layer -->
+            <div class="layer-container central-hub rounded-xl p-8 relative overflow-hidden">
+                <div class="relative z-10 flex flex-col items-center justify-center text-center">
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-4 text-white drop-shadow-lg">UNIFIED REVENUE VIEW</h2>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <div class="px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-sm font-medium border border-white/20">Customer 360</div>
+                        <div class="px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-sm font-medium border border-white/20">Account 360</div>
+                        <div class="px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-sm font-medium border border-white/20">Orders + Pipeline</div>
+                        <div class="px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-sm font-medium border border-white/20">Service + IoT Usage</div>
+                    </div>
+                </div>
+                <!-- Animated Background Decoration -->
+                <div class="absolute inset-0 opacity-10">
+                    <svg width="100%" height="100%" viewBox="0 0 800 200">
+                        <circle cx="400" cy="100" r="150" fill="none" stroke="white" stroke-width="2" stroke-dasharray="10 10">
+                            <animateTransform attributeName="transform" type="rotate" from="0 400 100" to="360 400 100" dur="20s" repeatCount="indefinite" />
+                        </circle>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- 2. Data Unification Layer -->
+            <div class="layer-container rounded-xl p-6 bg-slate-800/50">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-cyan-500/20 text-cyan-400 p-2 rounded-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </span>
+                    <h2 class="text-xl font-semibold uppercase tracking-wider text-cyan-400">Data Unification Platform (CDP / Data Cloud)</h2>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-bold text-center">
+                    <div class="bg-slate-900 p-3 rounded border-b-2 border-cyan-500">INGESTION<br><span class="text-[10px] font-normal text-slate-400">Batch + Real-time</span></div>
+                    <div class="bg-slate-900 p-3 rounded border-b-2 border-cyan-500">IDENTITY RESOLUTION<br><span class="text-[10px] font-normal text-slate-400">Account & Contact ID</span></div>
+                    <div class="bg-slate-900 p-3 rounded border-b-2 border-cyan-500">HARMONIZATION<br><span class="text-[10px] font-normal text-slate-400">Standard Data Model</span></div>
+                    <div class="bg-slate-900 p-3 rounded border-b-2 border-cyan-500">DATA FEDERATION<br><span class="text-[10px] font-normal text-slate-400">Multi-source Access</span></div>
+                </div>
+            </div>
+
+            <!-- 1. Data Sources Layer (Bottom) -->
+            <div class="layer-container rounded-xl p-6 bg-slate-900/80">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-slate-500/20 text-slate-400 p-2 rounded-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+                    </span>
+                    <h2 class="text-xl font-semibold uppercase tracking-wider text-slate-400">Data Sources</h2>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-6 gap-3">
+                    <div class="p-3 bg-slate-800 rounded text-center">
+                        <div class="text-[10px] font-bold text-blue-400 mb-1">SALES & REVENUE</div>
+                        <div class="text-[11px]">ERP Orders<br>Revenue Data</div>
+                    </div>
+                    <div class="p-3 bg-slate-800 rounded text-center">
+                        <div class="text-[10px] font-bold text-blue-400 mb-1">CRM</div>
+                        <div class="text-[11px]">Salesforce Opps<br>Forecasts</div>
+                    </div>
+                    <div class="p-3 bg-slate-800 rounded text-center">
+                        <div class="text-[10px] font-bold text-blue-400 mb-1">ENGAGEMENT</div>
+                        <div class="text-[11px]">Web & eDM<br>Marketing</div>
+                    </div>
+                    <div class="p-3 bg-slate-800 rounded text-center">
+                        <div class="text-[10px] font-bold text-blue-400 mb-1">SERVICE</div>
+                        <div class="text-[11px]">Technical Support<br>Cases</div>
+                    </div>
+                    <div class="p-3 bg-slate-800 rounded text-center">
+                        <div class="text-[10px] font-bold text-blue-400 mb-1">CHANNEL</div>
+                        <div class="text-[11px]">Distributors<br>Partners</div>
+                    </div>
+                    <div class="p-3 bg-slate-800 rounded text-center border border-blue-500/30">
+                        <div class="text-[10px] font-bold text-blue-400 mb-1">IoT / PRODUCT</div>
+                        <div class="text-[11px]">Telemetry<br>Usage Data</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Adjusted Feedback Loop Indicator to prevent overlap -->
+            <div class="absolute -right-2 md:right-0 top-10 bottom-10 w-8 hidden lg:flex flex-col items-center pointer-events-none">
+                <div class="flex-1 border-r-2 border-dashed border-emerald-500/40 rounded-tr-[40px] rounded-br-[40px]"></div>
+                <div class="absolute top-1/2 -translate-y-1/2 left-0 rotate-90 whitespace-nowrap text-[10px] font-bold tracking-widest text-emerald-500/60 uppercase">
+                    Continuous Optimization Feedback Loop
+                </div>
+            </div>
+        </div>
+
+        <!-- Legend / Footer -->
+        <footer class="mt-12 pt-6 border-t border-slate-800 flex flex-wrap justify-between items-center gap-4 text-slate-500 text-sm">
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-2">
+                    <span class="w-3 h-1 bg-brand-secondary rounded-full"></span>
+                    <span>Data Flow (Upward)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="w-3 h-1 bg-emerald-500 rounded-full"></span>
+                    <span>Action Loop (Downward)</span>
+                </div>
+            </div>
+            <div>
+                Architected for Industrial Manufacturing Scalability
+            </div>
+        </footer>
+    </div>
+
+    <div id="tooltip" class="tooltip"></div>
+
+    <script>
+        // Simple interactivity for exploration
+        const layers = document.querySelectorAll('.layer-container');
+        const tooltip = document.getElementById('tooltip');
+
+        layers.forEach(layer => {
+            layer.addEventListener('mousemove', (e) => {
+                const title = layer.querySelector('h2')?.innerText || "Central View";
+                tooltip.innerText = `Layer: ${title}`;
+                tooltip.style.opacity = '1';
+                tooltip.style.left = e.pageX + 15 + 'px';
+                tooltip.style.top = e.pageY + 15 + 'px';
+            });
+
+            layer.addEventListener('mouseleave', () => {
+                tooltip.style.opacity = '0';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -245,7 +245,7 @@
     </section>
 
     <!-- 導入事績 (Case Studies) -->
-    <section id="cases" class="py-24 bg-white">
+    <section id="cases" class="py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold mb-4">導入事績與實戰案例</h2>
@@ -253,13 +253,15 @@
                 <p class="text-gray-600 text-lg">透過專業顧問與技術落地，我們已協助多家具備指標意義的企業達成數位轉型目標。</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8 mb-16">
-                <!-- 案例一：Smart Manufacturing -->
+            <!-- 四個案例的 Grid 佈局 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- 案例：Smart Manufacturing -->
                 <div class="case-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-lg flex flex-col">
                     <div class="p-8 flex-grow">
                         <div class="flex justify-between items-start mb-4">
                             <span class="case-tag">Smart Manufacturing</span>
-                            <i class="fas fa-vial text-blue-500 text-2xl"></i>
+                            <i class="fas fa-vial text-green-500 text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2 text-gray-800">醫療材料大廠：產線全自動化與數據監控</h3>
                         <p class="text-blue-600 text-xs font-bold mb-4">For Manufacturing Operations / Production Leaders</p>
@@ -285,19 +287,62 @@
                                 <p class="text-[10px] text-gray-500 font-bold">系統 On-time</p>
                             </div>
                             <div class="bg-green-50 p-4 rounded-xl text-center border border-green-100">
-                                <p class="text-2xl font-bold text-green-600">+98%</p>
+                                <p class="text-2xl font-bold text-green-600">98%</p>
                                 <p class="text-[10px] text-gray-500 font-bold">產品良率提升</p>
                             </div>
                         </div>
 
                         <div class="space-y-3">
                             <a href="" class="block text-sm text-blue-600 font-bold hover:underline">👉 了解智能工廠的及時排程與戰略</a>
-                            <a href="#contact" class="block text-sm text-gray-800 font-bold hover:text-blue-600 transition">👉 立即預約 一同探討我們為您量身訂作的方案</a>
+                            <a href="#contact" class="block text-sm text-gray-800 font-bold hover:text-blue-600 transition">👉 立即預約 探討為您企業量身打造的方案</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- 案例二：Cloud Enterprise -->
+                 <!-- 案例：系統架構重建與流程最佳化 -->
+                <div class="case-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-lg flex flex-col">
+                    <div class="p-8 flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="case-tag">Smart Manufacturing</span>
+                            <i class="fa-solid fa-rocket text-blue-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">架構解耦系統整合：跨系統資料同步與流程重建</h3>
+                        <p class="text-blue-600 text-xs font-bold mb-4">For IT Integration / Operations</p>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div>
+                                <p class="text-gray-400 text-[10px] uppercase font-bold mb-1">solution architecture</p>
+                                <p class="text-gray-600 text-sm leading-relaxed">透過資料整合架構與流程重建，建立穩定且可擴展的跨系統資料同步機制。</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-[10px] uppercase font-bold mb-1">Challenge</p>
+                                <p class="text-gray-600 text-sm leading-relaxed">多套系統並行運作，資料需人工轉換與重複輸入，導致作業延遲與錯誤率提高，影響營運效率。</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-[10px] uppercase font-bold mb-1">Solution</p>
+                                <p class="text-gray-600 text-sm leading-relaxed">規劃 API 串接與中介資料層，統一資料交換格式，並重新梳理資料流與業務流程，確保系統間同步邏輯一致。</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 mb-8">
+                            <div class="bg-blue-50 p-4 rounded-xl text-center border border-blue-100">
+                                <p class="text-2xl font-bold text-blue-600">30/70</p>
+                                <p class="text-[10px] text-gray-500 font-bold">人機協作</p>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-xl text-center border border-green-100">
+                                <p class="text-2xl font-bold text-green-600">Reliability</p>
+                                <p class="text-[10px] text-gray-500 font-bold">即時性 穩定性</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3">
+                            <a href="sysinter22.html" class="block text-sm text-blue-600 font-bold hover:underline">👉 了解跨系統資料與流程重建的核心思維</a>
+                            <a href="#contact" class="block text-sm text-gray-800 font-bold hover:text-blue-600 transition">👉 立即預約 了解您的痛點及最需要馬上展開的任務</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 案例：Cloud Enterprise -->
                 <div class="case-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-lg flex flex-col">
                     <div class="p-8 flex-grow">
                         <div class="flex justify-between items-start mb-4">
@@ -324,7 +369,7 @@
 
                         <div class="grid grid-cols-2 gap-4 mb-8">
                             <div class="bg-purple-50 p-4 rounded-xl text-center border border-purple-100">
-                                <p class="text-2xl font-bold text-purple-600">-65%</p>
+                                <p class="text-2xl font-bold text-purple-600">-45%</p>
                                 <p class="text-[10px] text-gray-500 font-bold">行政作業減省</p>
                             </div>
                             <div class="bg-blue-50 p-4 rounded-xl text-center border border-blue-100">
@@ -334,13 +379,14 @@
                         </div>
 
                         <div class="space-y-3">
-                            <a href="#" class="block text-sm text-blue-600 font-bold hover:underline">👉 了解雲服務如何為企業帶來敏捷的運作動能</a>
+                            <a href="StdOp23.html" class="block text-sm text-blue-600 font-bold hover:underline">👉 了解雲服務如何為企業帶來敏捷的運作動能</a>
                             <a href="#contact" class="block text-sm text-gray-800 font-bold hover:text-blue-600 transition">👉 立即預約 探討您的企業目標</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- 案例三：E-Commerce DX -->
+
+                <!-- 案例：E-Commerce DX -->
                 <div class="case-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-lg flex flex-col">
                     <div class="p-8 flex-grow">
                         <div class="flex justify-between items-start mb-4">
@@ -381,7 +427,11 @@
                         </div>
                     </div>
                 </div>
+
             </div>
+        </div>
+    </section>
+
 
             <!-- 限額諮詢提示
             <div class="text-center">
@@ -522,13 +572,15 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-bold mb-4">專業團隊介紹</h2>
             <div class="w-16 h-1 bg-blue-600 mx-auto mb-16"></div>
-            
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Tony -->
                 <div class="team-card bg-white p-10 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
-                    <div class="w-36 h-36 rounded-full overflow-hidden border-4 border-white shadow-md mb-6 avatar-placeholder" id="avatar-tony">
+                    <i class="fa-solid fa-user text-green-500 text-5xl"></i>
+					<!-- 
+					<div class="w-36 h-36 rounded-full overflow-hidden border-4 border-white shadow-md mb-6 avatar-placeholder" id="avatar-tony">
                         <div class="loading-spinner"></div>
                     </div>
+					 -->
                     <h3 class="text-xl font-bold mb-1">Tony</h3>
                     <p class="text-blue-600 font-medium mb-4">生產自動化顧問</p>
                     <p class="text-gray-500 text-sm px-4">資深流程專家，精通亞洲高科技製造、工業 4.0 ，及生產線優化。</p>
@@ -536,9 +588,12 @@
 
                 <!-- Linus -->
                 <div class="team-card bg-white p-10 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
-                    <div class="w-36 h-36 rounded-full overflow-hidden border-4 border-white shadow-md mb-6 avatar-placeholder" id="avatar-linus">
+                    <i class="fa-solid fa-user text-grey-300 text-5xl"></i>
+					<!-- 
+					<div class="w-36 h-36 rounded-full overflow-hidden border-4 border-white shadow-md mb-6 avatar-placeholder" id="avatar-linus">
                         <div class="loading-spinner"></div>
                     </div>
+					 -->
                     <h3 class="text-xl font-bold mb-1">Linus</h3>
                     <p class="text-blue-600 font-medium mb-4">技術創新顧問</p>
                     <p class="text-gray-500 text-sm px-4">軟體工程技術領袖，致力於高性能系統與雲端整合。</p>
@@ -546,9 +601,12 @@
 
                 <!-- Vida -->
                 <div class="team-card bg-white p-10 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
-                    <div class="w-36 h-36 rounded-full overflow-hidden border-4 border-white shadow-md mb-6 avatar-placeholder" id="avatar-vida">
+                    <i class="fa-solid fa-user text-orange-500 text-5xl"></i>
+					<!-- 
+					<div class="w-36 h-36 rounded-full overflow-hidden border-4 border-white shadow-md mb-6 avatar-placeholder" id="avatar-vida">
                         <div class="loading-spinner"></div>
                     </div>
+					 -->
                     <h3 class="text-xl font-bold mb-1">Vida</h3>
                     <p class="text-blue-600 font-medium mb-4">商業戰略顧問</p>
                     <p class="text-gray-500 text-sm px-4">深耕區域商務模式，導航企業精確數位轉型之路。</p>
